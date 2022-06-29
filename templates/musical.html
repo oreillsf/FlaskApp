@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+<style>
+
+</style>
+    <title>
+        {% block title %} <h1>Musical Password Authentication</h1>{% endblock %}
+    </title>
+    {% block content %}
+    
+    <div class="message">
+        Select 1 tune to set as musical password.
+        <audio controls style="padding-top: 10px;">
+                        <source src="./static/Honk.mp3" type="audio/mpeg" style="background-color: #333F50;">
+                        Your browser does not support the audio element.
+                    </audio>
+        <br><br>
+        
+    </div>
+
+    <form action="{{ url_for("musicalForm1") }}" method="post" name="musicalForm1">
+        
+        <table>
+
+            <tr>
+                <td style="padding: 50px 50px 50px 100px;">
+                    <label>
+                        <input type="radio" name="music" value="honk" style="transform: scale(2.5);" required>
+                        <audio controls style="padding-top: 10px;">
+                            <source src="./static/Honk.mp3" type="audio/mpeg" style="background-color: #333F50;">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </label>
+                </td>
+
+                <td style="padding: 50px 50px 50px 100px;">
+                    <label>
+                        <input type="radio" name="music" value="dog" style="transform: scale(2.5);" required>
+                        <audio controls style="padding-top: 10px;">
+                            <source src="./static/Honk.mp3" type="audio/mpeg" style="background-color: #333F50;">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </label>
+                </td>
+                <td style="padding: 50px 50px 50px 100px;">
+                    <label>
+                        <input type="radio" name="music" value="cat" style="transform: scale(2.5);" required>
+                        <audio controls style="padding-top: 10px;">
+                            <source src="./static/cat.mp3" type="audio/mpeg" style="background-color: #333F50;">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </label>
+                </td>
+                <td style="padding: 50px 50px 50px 100px;">
+                    <label>
+                        <input type="radio" name="music" value="metal" style="transform: scale(2.5);" required>
+                        <audio controls style="padding-top: 10px;">
+                            <source src="./static/metal.mp3" type="audio/mpeg" style="background-color: #333F50;">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </label>
+                </td>
+                
+                       
+            </tr>
+            
+            
+            </table>
+            <br>
+            
+            <button type="submit" class="buttonCustom" value="submit" name="buttonForm" >Submit</button>
+            </form>
+            {% endblock %}
